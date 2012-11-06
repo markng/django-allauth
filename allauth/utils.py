@@ -32,9 +32,9 @@ def generate_unique_username(txt):
     username = username.encode('ascii', 'ignore')
     username = unicode(re.sub('[^\w\s@+.-]', '', username).lower())
     # Django allows for '@' in usernames in order to accomodate for
-    # project wanting to use e-mail for username. In allauth we don't
-    # use this, we already have a proper place for putting e-mail
-    # addresses (EmailAddress), so let's not use the full e-mail
+    # project wanting to use email for username. In allauth we don't
+    # use this, we already have a proper place for putting email
+    # addresses (EmailAddress), so let's not use the full email
     # address and only take the part leading up to the '@'.
     username = username.split('@')[0]
     username = username.strip() or 'user'

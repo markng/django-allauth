@@ -19,10 +19,10 @@ account.
 
 This approach separates the worlds of local and social
 authentication. However, there are common scenarios to be dealt with
-in both worlds. For example, an e-mail address passed along by an
+in both worlds. For example, an email address passed along by an
 OpenID provider is not guaranteed to be verified. So, before hooking
-an OpenID account up to a local account the e-mail address must be
-verified. So, e-mail verification needs to be present in both worlds.
+an OpenID account up to a local account the email address must be
+verified. So, email verification needs to be present in both worlds.
 
 Integrating both worlds is quite a tedious process. It is definately
 not a matter of simply adding one social authentication app, and one
@@ -68,11 +68,11 @@ Supported Flows
 
 - Optional instant-signup for social accounts -- no questions asked
 
-- E-mail address management (multiple e-mail addresses, setting a primary)
+- Email address management (multiple email addresses, setting a primary)
 
 - Password forgotten flow
 
-- E-mail address verification flow
+- Email address verification flow
 
 Supported Providers
 -------------------
@@ -100,8 +100,8 @@ Features
 --------
 
 - Supports multiple authentication schemes (e.g. login by user name,
-  or by e-mail), as well as multiple strategies for account
-  verification (ranging from none to e-mail verification).
+  or by email), as well as multiple strategies for account
+  verification (ranging from none to email verification).
 
 - All access tokens are consistently stored so that you can publish
   wall updates etc.
@@ -145,7 +145,7 @@ settings.py::
         # Needed to login by username in Django admin, regardless of `allauth`
         "django.contrib.auth.backends.ModelBackend",
 
-        # `allauth` specific authentication methods, such as login by e-mail
+        # `allauth` specific authentication methods, such as login by email
         "allauth.account.auth_backends.AuthenticationBackend",
         ...
     )
@@ -182,28 +182,28 @@ Available settings:
 
 ACCOUNT_AUTHENTICATION_METHOD (="username" | "email" | "username_email")
   Specifies the login method to use -- whether the user logs in by
-  entering his username, e-mail address, or either one of both.
+  entering his username, email address, or either one of both.
 
 ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL (=settings.LOGIN_URL)
-  The URL to redirect to after a successful e-mail confirmation, in case no
+  The URL to redirect to after a successful email confirmation, in case no
   user is logged in.
 
 ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL (=settings.LOGIN_REDIRECT_URL)
-  The URL to redirect to after a successful e-mail confirmation, in case of
+  The URL to redirect to after a successful email confirmation, in case of
   an authenticated user.
 
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS (=3)
   Determines the expiration date of email confirmation mails (# of days).
 
 ACCOUNT_EMAIL_REQUIRED (=False)
-  The user is required to hand over an e-mail address when signing up.
+  The user is required to hand over an email address when signing up.
 
 ACCOUNT_EMAIL_VERIFICATION (="mandatory" | "optional" | "none")
-  Determines the e-mail verification method during signup. When set to
+  Determines the email verification method during signup. When set to
   "mandatory" the user is blocked from logging in until the email
   address is verified. Choose "optional" or "none" to allow logins
-  with an unverified e-mail address. In case of "optional", the e-mail
-  verification mail is still sent, whereas in case of "none" no e-mail
+  with an unverified email address. In case of "optional", the email
+  verification mail is still sent, whereas in case of "none" no email
   verification mails are sent.
 
 ACCOUNT_EMAIL_SUBJECT_PREFIX (="[Site] ")
@@ -221,7 +221,7 @@ ACCOUNT_SIGNUP_PASSWORD_VERIFICATION (=True)
   When signing up, let the user type in his password twice to avoid typ-o's.
 
 ACCOUNT_UNIQUE_EMAIL (=True)
-  Enforce uniqueness of e-mail addresses.
+  Enforce uniqueness of email addresses.
 
 ACCOUNT_USER_DISPLAY (=a callable returning `user.username`)
   A callable (or string of the form `'some.module.callable_name'`)
@@ -244,13 +244,13 @@ ACCOUNT_PASSWORD_MIN_LENGTH (=6)
   An integer specifying the minimum password length.
 
 SOCIALACCOUNT_QUERY_EMAIL (=ACCOUNT_EMAIL_REQUIRED)
-  Request e-mail address from 3rd party account provider? E.g. using
+  Request email address from 3rd party account provider? E.g. using
   OpenID AX, or the Facebook "email" permission.
 
 SOCIALACCOUNT_AUTO_SIGNUP (=True) 
   Attempt to bypass the signup form by using fields (e.g. username,
   email) retrieved from the social account provider. If a conflict
-  arises due to a duplicate e-mail address the signup form will still
+  arises due to a duplicate email address the signup form will still
   kick in.
 
 SOCIALACCOUNT_AVATAR_SUPPORT (= 'avatar' in settings.INSTALLED_APPS)
@@ -295,7 +295,7 @@ From 0.7.0
   - The `emailconfirmation` setting `EMAIL_CONFIRMATION_DAYS` has been
     replaced by `ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS`.
 
-  - Instead of directly confirming the e-mail address upon the GET
+  - Instead of directly confirming the email address upon the GET
     request the confirmation is now processed as part of an explicit
     POST. Therefore, a new template `account/email_confirm.html` must
     be setup.
@@ -524,7 +524,7 @@ The following signals are emitted:
 - `allauth.account.signals.user_signed_up`
 
   Sent when a user signs up for an account. This is signal is
-  typically followed by a `user_logged_in`, unless e-mail verification
+  typically followed by a `user_logged_in`, unless email verification
   prohibits the user to log in.
 
 - `allauth.socialaccount.signals.pre_social_login`
@@ -586,7 +586,7 @@ Use the `provider_login_url` tag to generate provider specific login URLs::
 Decorators
 ==========
 
-Verified E-mail Required
+Verified Email Required
 ------------------------
 
 Even when email verification is not mandatory during signup, there
@@ -605,8 +605,8 @@ The behavior is as follows:
 - If the user isn't logged in, it acts identical to the
   `login_required` decorator.
 
-- If the user is logged in but has no verified e-mail address, an
-  e-mail verification mail is automatically resend and the user is
+- If the user is logged in but has no verified email address, an
+  email verification mail is automatically resend and the user is
   presented with a page informing him he needs to verify his email
   address.
 

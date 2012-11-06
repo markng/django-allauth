@@ -10,31 +10,31 @@ class EmailVerificationMethod:
     # After signing up, keep the user account inactive until the email
     # address is verified
     MANDATORY = 'mandatory'
-    # Allow login with unverified e-mail (e-mail verification is still sent)
+    # Allow login with unverified email (email verification is still sent)
     OPTIONAL = 'optional'
-    # Don't send e-mail verification mails during signup
+    # Don't send email verification mails during signup
     NONE = 'none'
 
-# Determines the expiration date of e-mail confirmation mails (# of days)
+# Determines the expiration date of email confirmation mails (# of days)
 EMAIL_CONFIRMATION_EXPIRE_DAYS \
     = getattr(settings, "ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS", 
               getattr(settings, "EMAIL_CONFIRMATION_DAYS", 3))
 
-# The URL to redirect to after a successful e-mail confirmation, in case of
+# The URL to redirect to after a successful email confirmation, in case of
 # an authenticated user
 EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL \
     = getattr(settings, "ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL", settings.LOGIN_REDIRECT_URL)
 
-# The URL to redirect to after a successful e-mail confirmation, in case no
+# The URL to redirect to after a successful email confirmation, in case no
 # user is logged in
 EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL \
     = getattr(settings, "ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL",
               settings.LOGIN_URL)
                                          
-# The user is required to hand over an e-mail address when signing up
+# The user is required to hand over an email address when signing up
 EMAIL_REQUIRED = getattr(settings, "ACCOUNT_EMAIL_REQUIRED", False)
 
-# See e-mail verification method
+# See email verification method
 EMAIL_VERIFICATION = getattr(settings, "ACCOUNT_EMAIL_VERIFICATION", 
                              EmailVerificationMethod.OPTIONAL)
 # Deal with legacy (boolean based) setting
@@ -55,7 +55,7 @@ else:
     AUTHENTICATION_METHOD = getattr(settings, "ACCOUNT_AUTHENTICATION_METHOD", 
                                     AuthenticationMethod.USERNAME)
 
-# Enforce uniqueness of e-mail addresses
+# Enforce uniqueness of email addresses
 UNIQUE_EMAIL = getattr(settings, "ACCOUNT_UNIQUE_EMAIL", True)
 
 # Signup password verification

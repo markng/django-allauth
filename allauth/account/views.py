@@ -168,7 +168,7 @@ def email(request, **kwargs):
             if add_email_form.is_valid():
                 email_address = add_email_form.save(request)
                 messages.add_message(request, messages.INFO,
-                    ugettext(u"Confirmation e-mail sent to %(email)s") % {
+                    ugettext(u"Confirmation email sent to %(email)s") % {
                             "email": add_email_form.cleaned_data["email"]
                         }
                     )
@@ -187,7 +187,7 @@ def email(request, **kwargs):
                             email=email,
                         )
                         messages.add_message(request, messages.INFO,
-                            ugettext("Confirmation e-mail sent to %(email)s") % {
+                            ugettext("Confirmation email sent to %(email)s") % {
                                 "email": email,
                             }
                         )
@@ -206,12 +206,12 @@ def email(request, **kwargs):
                             messages.add_message \
                                 (request, messages.ERROR,
                                  ugettext("You cannot remove your primary"
-                                          " e-mail address (%(email)s)")
+                                          " email address (%(email)s)")
                                  % { "email": email })
                         else:
                             email_address.delete()
                             messages.add_message(request, messages.SUCCESS,
-                                ugettext("Removed e-mail address %(email)s") % {
+                                ugettext("Removed email address %(email)s") % {
                                     "email": email,
                                 }
                             )
@@ -237,7 +237,7 @@ def email(request, **kwargs):
                                         # not verified.
                                     ).exists():
                             messages.add_message(request, messages.ERROR,
-                                    ugettext("Your primary e-mail address must "
+                                    ugettext("Your primary email address must "
                                         "be verified"))
                         else:
                             # Sending the old primary address to the signal
@@ -249,7 +249,7 @@ def email(request, **kwargs):
                                 from_email_address = None
                             email_address.set_as_primary()
                             messages.add_message(request, messages.SUCCESS,
-                                         ugettext("Primary e-mail address set"))
+                                         ugettext("Primary email address set"))
                             signals.email_changed.send(
                                     sender=request.user.__class__,
                                     request=request, user=request.user,

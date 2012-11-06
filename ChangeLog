@@ -1,6 +1,6 @@
 2012-10-23  Raymond Penners  <raymond.penners@intenct.nl>
 
-	* account: Added option to completely disable e-mail verification
+	* account: Added option to completely disable email verification
 	during signup.
 
 2012-10-10  Raymond Penners  <raymond.penners@intenct.nl>
@@ -12,7 +12,7 @@
 
 	* LinkedIn: Added support for passing along the OAuth scope.
 
-	* account: Improved e-mail confirmation error handling, no more
+	* account: Improved email confirmation error handling, no more
 	confusing 404s.
 
 2012-10-03  Raymond Penners  <raymond.penners@intenct.nl>
@@ -74,15 +74,15 @@
 
 2012-08-16  Raymond Penners  <raymond.penners@intenct.nl>
 
-	* account: Sam Solomon cleaned up the e-mail management view:
+	* account: Sam Solomon cleaned up the email management view:
 	added proper redirect after POSTs, prevent deletion of primary
-	e-mail. Thanks.
+	email. Thanks.
 
 2012-08-04  Raymond Penners  <raymond.penners@intenct.nl>
 
 	* account: When signing up, instead of generating a completely
 	random username a more sensible username is automatically derived
-	from first/last name or e-mail.
+	from first/last name or email.
 
 2012-07-18  Raymond Penners  <raymond.penners@intenct.nl>
 
@@ -135,7 +135,7 @@
 2012-06-11  Raymond Penners  <raymond.penners@intenct.nl>
 
 	* account: Added ACCOUNT_AUTHENTICATION_METHOD setting, supporting
-	login by username, e-mail or both.
+	login by username, email or both.
 
 2012-06-08  Raymond Penners  <raymond.penners@intenct.nl>
 
@@ -166,8 +166,8 @@
 
 2012-03-29  Raymond Penners  <raymond.penners@intenct.nl>
 
-	* account: E-mail confirmation mails are now automatically resent
-	whenever a user attempts to login with an unverified e-mail
+	* account: Email confirmation mails are now automatically resent
+	whenever a user attempts to login with an unverified email
 	address (if ACCOUNT_EMAIL_VERIFICATION=True).
 
 2012-03-25  Raymond Penners  <raymond.penners@intenct.nl>
@@ -191,7 +191,7 @@
 2012-02-28  Raymond Penners  <raymond.penners@intenct.nl>
 
 	* account: `is_active` is no longer used to keep users with an
-	unverified e-mail address from loging in.
+	unverified email address from loging in.
 
 2012-02-22  Raymond Penners  <raymond.penners@intenct.nl>
 
@@ -204,8 +204,8 @@
 
 2012-01-06  Raymond Penners  <raymond.penners@intenct.nl>
 
-	* The e-mail authentication backend now attempts to use the
-	'username' parameter as an e-mail address. This is needed to
+	* The email authentication backend now attempts to use the
+	'username' parameter as an email address. This is needed to
 	properly integrate with other apps invoking authenticate.
 
 2011-05-29  Raymond Penners  <raymond.penners@intenct.nl>

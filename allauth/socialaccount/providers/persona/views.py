@@ -23,11 +23,11 @@ def persona_login(request):
                             provider=PersonaProvider.id,
                             extra_data=extra_data,
                             user=user)
-    # TBD: Persona e-mail addresses are verified, so we could check if
+    # TBD: Persona email addresses are verified, so we could check if
     # a matching local user account already exists with an identical
-    # verified e-mail address and short-circuit the social login. Then
+    # verified email address and short-circuit the social login. Then
     # again, this holds for all social providers that guarantee
-    # verified e-mail addresses, so if at all, short-circuiting should
+    # verified email addresses, so if at all, short-circuiting should
     # probably not be handled here...
     login = SocialLogin(account)
     login.state = SocialLogin.state_from_request(request)

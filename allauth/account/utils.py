@@ -117,10 +117,10 @@ def complete_signup(request, user, success_url):
 
 def send_email_confirmation(request, user):
     """
-    E-mail verification mails are sent:
+    Email verification mails are sent:
     a) Explicitly: when a user signs up
     b) Implicitly: when a user attempts to log in using an unverified
-    e-mail while EMAIL_VERIFICATION is mandatory.
+    email while EMAIL_VERIFICATION is mandatory.
 
     Especially in case of b), we want to limit the number of mails
     sent (consider a user retrying a few times), which is why there is
@@ -150,7 +150,7 @@ def send_email_confirmation(request, user):
             email_confirmation_sent = False
         if request and not email_confirmation_sent:
             messages.info(request,
-                _(u"Confirmation e-mail sent to %(email)s") % {"email": email}
+                _(u"Confirmation email sent to %(email)s") % {"email": email}
             )
 
 def format_email_subject(subject):

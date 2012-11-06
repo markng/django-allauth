@@ -48,7 +48,7 @@ class DisconnectForm(forms.Form):
             # No email address, no password reset
             if EmailAddress.objects.filter(user=self.user,
                                            verified=True).count() == 0:
-                raise forms.ValidationError(_("Your account has no verified e-mail address."))
+                raise forms.ValidationError(_("Your account has no verified email address."))
         return self.cleaned_data
 
     def save(self):

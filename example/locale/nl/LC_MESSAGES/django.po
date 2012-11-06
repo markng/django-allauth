@@ -22,8 +22,8 @@ msgstr "Mijn Account"
 
 #: templates/bootstrap/allauth/account/base.html:12
 #: templates/uniform/allauth/account/email.html:10
-msgid "E-mail Addresses"
-msgstr "E-mail adressen"
+msgid "Email Addresses"
+msgstr "Email adressen"
 
 #: templates/bootstrap/allauth/account/base.html:15
 #: templates/bootstrap/allauth/account/password_change.html:6
@@ -51,12 +51,12 @@ msgstr "Account"
 
 #: templates/bootstrap/allauth/account/email.html:14
 #: templates/uniform/allauth/account/email.html:13
-msgid "The following e-mail addresses are associated to your account:"
-msgstr "De volgende e-mail adressen zijn gekoppeld aan jouw account:"
+msgid "The following email addresses are associated to your account:"
+msgstr "De volgende email adressen zijn gekoppeld aan jouw account:"
 
 #: templates/bootstrap/allauth/account/email.html:23
-msgid "E-mail"
-msgstr "E-mail"
+msgid "Email"
+msgstr "Email"
 
 #: templates/bootstrap/allauth/account/email.html:26
 msgid "Status"
@@ -85,7 +85,7 @@ msgstr "Maak primair"
 #: templates/bootstrap/allauth/account/email.html:54
 #: templates/uniform/allauth/account/email.html:38
 msgid "Re-send Verification"
-msgstr "Stuur verificatie e-mail opnieuw"
+msgstr "Stuur verificatie email opnieuw"
 
 #: templates/bootstrap/allauth/account/email.html:55
 #: templates/bootstrap/allauth/socialaccount/connections.html:58
@@ -101,39 +101,39 @@ msgstr "Waarschuwing:"
 #: templates/bootstrap/allauth/account/email.html:62
 #: templates/uniform/allauth/account/email.html:46
 msgid ""
-"You currently do not have any e-mail address set up. You should really add "
-"an e-mail address so you can receive notifications, reset your password, etc."
+"You currently do not have any email address set up. You should really add "
+"an email address so you can receive notifications, reset your password, etc."
 msgstr ""
-"Het is raadzaam een e-mail adres toe te voegen zodat je notificaties kunt "
+"Het is raadzaam een email adres toe te voegen zodat je notificaties kunt "
 "ontvangen, je wachtwoord opnieuw kunt instellen, enz."
 
 #: templates/bootstrap/allauth/account/email.html:67
 #: templates/uniform/allauth/account/email.html:51
-msgid "Add E-mail Address"
-msgstr "Voeg e-mail adres toe"
+msgid "Add Email Address"
+msgstr "Voeg email adres toe"
 
 #: templates/bootstrap/allauth/account/email.html:73
 #: templates/uniform/allauth/account/email.html:58
-msgid "Add E-mail"
-msgstr "E-mail toevoegen"
+msgid "Add Email"
+msgstr "Email toevoegen"
 
 #: templates/bootstrap/allauth/account/email.html:84
 #: templates/uniform/allauth/account/email.html:70
-msgid "Do you really want to remove the selected e-mail address?"
-msgstr "Wil je het geselecteerde e-mail adres echt verwijderen?"
+msgid "Do you really want to remove the selected email address?"
+msgstr "Wil je het geselecteerde email adres echt verwijderen?"
 
 #: templates/bootstrap/allauth/account/email_confirm.html:7
 #: templates/bootstrap/allauth/account/email_confirm.html:11
-msgid "Confirm E-mail Address"
-msgstr "Bevestig e-mail adres"
+msgid "Confirm Email Address"
+msgstr "Bevestig email adres"
 
 #: templates/bootstrap/allauth/account/email_confirm.html:15
 #, python-format
 msgid ""
-"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
+"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an email "
 "address for user %(user_display)s."
 msgstr ""
-"Bevestig dat <a href=\"mailto:%(email)s\">%(email)s</a> een e-mail adres is "
+"Bevestig dat <a href=\"mailto:%(email)s\">%(email)s</a> een email adres is "
 "voor gebruiker %(user_display)s."
 
 #: templates/bootstrap/allauth/account/email_confirm.html:19
@@ -182,10 +182,10 @@ msgstr "Nieuw wachtwoord"
 #: templates/bootstrap/allauth/account/password_reset.html:16
 #: templates/uniform/allauth/account/password_reset.html:16
 msgid ""
-"Forgotten your password? Enter your e-mail address below, and we'll send you "
-"an e-mail allowing you to reset it."
+"Forgotten your password? Enter your email address below, and we'll send you "
+"an email allowing you to reset it."
 msgstr ""
-"Wachtwoord vergeten? Vul je e-mail adres in en we sturen je een e-mail "
+"Wachtwoord vergeten? Vul je email adres in en we sturen je een email "
 "waarmee je een nieuw wachtwoord kunt instellen."
 
 #: templates/bootstrap/allauth/account/password_reset.html:22
@@ -346,16 +346,16 @@ msgstr "Account Connecties"
 #~ msgstr "Je wachtwoord is gewist."
 
 #~ msgid ""
-#~ "We have sent you an e-mail. If you do not receive it within a few "
+#~ "We have sent you an email. If you do not receive it within a few "
 #~ "minutes, contact us at <a href=\"mailto:%(CONTACT_EMAIL)s\">"
 #~ "%(CONTACT_EMAIL)s</a>."
 #~ msgstr ""
-#~ "We hebben je een e-mail verstuurd. Als je deze niet binnen enkele minuten "
+#~ "We hebben je een email verstuurd. Als je deze niet binnen enkele minuten "
 #~ "ontvangen hebt, neem dan contact op met <a href=\"mailto:%(CONTACT_EMAIL)s"
 #~ "\">%(CONTACT_EMAIL)s</a>."
 
 #~ msgid ""
-#~ "You're receiving this e-mail because you or someone else has requested a "
+#~ "You're receiving this email because you or someone else has requested a "
 #~ "password for your user account at %(site_domain)s.\n"
 #~ "It can be safely ignored if you did not request a password reset. Click "
 #~ "the link below to reset your password.\n"
@@ -386,17 +386,17 @@ msgstr "Account Connecties"
 #~ msgid "Timezone"
 #~ msgstr "Tijdzone"
 
-#~ msgid "Verify Your E-mail Address"
-#~ msgstr "Verifieer je e-mail adres"
+#~ msgid "Verify Your Email Address"
+#~ msgstr "Verifieer je email adres"
 
 #~ msgid ""
-#~ "We have sent you an e-mail to <b>%(email)s</b> for verification. Follow "
+#~ "We have sent you an email to <b>%(email)s</b> for verification. Follow "
 #~ "the link provided to finalize the signup process. If you do not receive "
 #~ "it within a few minutes, contact us at <a href=\"mailto:%(CONTACT_EMAIL)s"
 #~ "\">%(CONTACT_EMAIL)s</a>."
 #~ msgstr ""
-#~ "We hebben een e-mail verstuurd aan <b>%(email)s</b> ter verificatie. Volg "
-#~ "de link in deze mail om je registratie af te sluiten. Als je de e-mail "
+#~ "We hebben een email verstuurd aan <b>%(email)s</b> ter verificatie. Volg "
+#~ "de link in deze mail om je registratie af te sluiten. Als je de email "
 #~ "niet binnen enkele minuten ontvangt, neem dan contact op met <a href="
 #~ "\"mailto:%(CONTACT_EMAIL)s\">%(CONTACT_EMAIL)s</a>."
 
@@ -406,8 +406,8 @@ msgstr "Account Connecties"
 #~ msgid "you are already logged in as %(user_display)s."
 #~ msgstr "je bent al ingelogd als %(user_display)s."
 
-#~ msgid "E-mail Address Confirmation"
-#~ msgstr "E-mail adres bevestiging"
+#~ msgid "Email Address Confirmation"
+#~ msgstr "Email adres bevestiging"
 
 #~ msgid "Invalid confirmation key."
 #~ msgstr "Ongeldige bevestigingssleutel."
@@ -451,14 +451,14 @@ msgstr "Account Connecties"
 #~ msgid "This account is currently inactive."
 #~ msgstr "Dit account is niet actief"
 
-#~ msgid "The e-mail address and/or password you specified are not correct."
-#~ msgstr "Je e-mail adres en wachtwoord komen niet overeen."
+#~ msgid "The email address and/or password you specified are not correct."
+#~ msgstr "Je email adres en wachtwoord komen niet overeen."
 
 #~ msgid "The username and/or password you specified are not correct."
 #~ msgstr "Je gebruikersnaam en wachtwoord komen niet overeen."
 
-#~ msgid "E-mail (optional)"
-#~ msgstr "E-mail (optioneel)"
+#~ msgid "Email (optional)"
+#~ msgstr "Email (optioneel)"
 
 #~ msgid "Usernames can only contain letters, numbers and underscores."
 #~ msgstr ""
@@ -468,8 +468,8 @@ msgstr "Account Connecties"
 #~ msgid "This username is already taken. Please choose another."
 #~ msgstr "Deze gebruikersnaam is al in gebruik. Kies a.u.b. een andere naam."
 
-#~ msgid "A user is registered with this e-mail address."
-#~ msgstr "Er is al een gebruiker geregistreerd met dit e-mail adres."
+#~ msgid "A user is registered with this email address."
+#~ msgstr "Er is al een gebruiker geregistreerd met dit email adres."
 
 #~ msgid "Password (again)"
 #~ msgstr "Wachtwoord (bevestigen)"
@@ -477,17 +477,17 @@ msgstr "Account Connecties"
 #~ msgid "You must type the same password each time."
 #~ msgstr "Je moet hetzelfde wachtwoord twee keer intoetsen."
 
-#~ msgid "Your e-mail address has already been verified"
-#~ msgstr "Je e-mail adres is al geverifieerd"
+#~ msgid "Your email address has already been verified"
+#~ msgstr "Je email adres is al geverifieerd"
 
-#~ msgid "Confirmation e-mail sent to %(email)s"
-#~ msgstr "Bevestigings e-mail verzonden aan %(email)s"
+#~ msgid "Confirmation email sent to %(email)s"
+#~ msgstr "Bevestigings email verzonden aan %(email)s"
 
-#~ msgid "This e-mail address already associated with this account."
-#~ msgstr "Dit e-mail adres is al geassocieerd met dit account."
+#~ msgid "This email address already associated with this account."
+#~ msgstr "Dit email adres is al geassocieerd met dit account."
 
-#~ msgid "This e-mail address already associated with another account."
-#~ msgstr "Dit e-mail adres is al geassocieerd met een ander account."
+#~ msgid "This email address already associated with another account."
+#~ msgstr "Dit email adres is al geassocieerd met een ander account."
 
 #~ msgid "Current Password"
 #~ msgstr "Huidig wachtwoord"
@@ -501,20 +501,20 @@ msgstr "Account Connecties"
 #~ msgid "Please type your current password."
 #~ msgstr "Geef je huidige wachtwoord op."
 
-#~ msgid "The e-mail address is not assigned to any user account"
-#~ msgstr "Dit e-mail adres is niet bij ons bekend"
+#~ msgid "The email address is not assigned to any user account"
+#~ msgstr "Dit email adres is niet bij ons bekend"
 
-#~ msgid "Password Reset E-mail"
+#~ msgid "Password Reset Email"
 #~ msgstr "Nieuw wachtwoord"
 
 #~ msgid "Successfully signed in as %(user)s."
 #~ msgstr "Je bent nu ingelogd als %(user)s."
 
-#~ msgid "Removed e-mail address %(email)s"
-#~ msgstr "E-mail adres %(email)s verwijderd"
+#~ msgid "Removed email address %(email)s"
+#~ msgstr "Email adres %(email)s verwijderd"
 
-#~ msgid "Primary e-mail address set"
-#~ msgstr "Primair e-mail adres ingesteld"
+#~ msgid "Primary email address set"
+#~ msgstr "Primair email adres ingesteld"
 
 #~ msgid "Password successfully changed."
 #~ msgstr "Wachtwoord wijziging geslaagd."
@@ -528,8 +528,8 @@ msgstr "Account Connecties"
 #~ msgid "Your local account has no password setup."
 #~ msgstr "Je account heeft geen wachtwoord ingesteld."
 
-#~ msgid "Your local account has no verified e-mail address."
-#~ msgstr "Je account heeft geen geverifieerd e-mail adres."
+#~ msgid "Your local account has no verified email address."
+#~ msgstr "Je account heeft geen geverifieerd email adres."
 
 #~ msgid "Invalid response while obtaining request token from \"%s\"."
 #~ msgstr ""
@@ -555,7 +555,7 @@ msgstr "Account Connecties"
 
 #, fuzzy
 #~ msgid ""
-#~ "You're receiving this e-mail because you requested a password reset\n"
+#~ "You're receiving this email because you requested a password reset\n"
 #~ "for your user account at Pinax.\n"
 #~ "\n"
 #~ "Your new password is: %(new_password)s\n"
@@ -587,7 +587,7 @@ msgstr "Account Connecties"
 #~ msgstr "Taal gewijzigd."
 
 #~ msgid "E-Mail Addresses"
-#~ msgstr "E-mail adressen"
+#~ msgstr "Email adressen"
 
 #~ msgid "add"
 #~ msgstr "Voeg toe"

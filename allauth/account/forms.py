@@ -63,8 +63,8 @@ class LoginForm(forms.Form):
         super(LoginForm, self).__init__(*args, **kwargs)
         if app_settings.AUTHENTICATION_METHOD == AuthenticationMethod.EMAIL:
             login_widget = forms.TextInput(attrs={'placeholder': 
-                                                  _('E-mail address') })
-            login_field = forms.EmailField(label=_("E-mail"),
+                                                  _('Email address') })
+            login_field = forms.EmailField(label=_("Email"),
                                            widget=login_widget)
         elif app_settings.AUTHENTICATION_METHOD \
                 == AuthenticationMethod.USERNAME:
@@ -77,7 +77,7 @@ class LoginForm(forms.Form):
             assert app_settings.AUTHENTICATION_METHOD \
                 == AuthenticationMethod.USERNAME_EMAIL
             login_widget = forms.TextInput(attrs={'placeholder': 
-                                                  _('Username or e-mail') })
+                                                  _('Username or email') })
             login_field = forms.CharField(label=ugettext("Login"),
                                           widget=login_widget)
         self.fields["login"] = login_field
@@ -115,7 +115,7 @@ class LoginForm(forms.Form):
                                               " inactive."))
         else:
             if app_settings.AUTHENTICATION_METHOD == AuthenticationMethod.EMAIL:
-                error = _("The e-mail address and/or password you specified"
+                error = _("The email address and/or password you specified"
                           " are not correct.")
             elif app_settings.AUTHENTICATION_METHOD \
                   == AuthenticationMethod.USERNAME:
@@ -183,10 +183,10 @@ class BaseSignupForm(_base_signup_form_class()):
                 == EmailVerificationMethod.MANDATORY) 
             or (app_settings.AUTHENTICATION_METHOD 
                 == AuthenticationMethod.EMAIL)):
-            self.fields["email"].label = ugettext("E-mail")
+            self.fields["email"].label = ugettext("Email")
             self.fields["email"].required = True
         else:
-            self.fields["email"].label = ugettext("E-mail (optional)")
+            self.fields["email"].label = ugettext("Email (optional)")
             self.fields["email"].required = False
         if not app_settings.USERNAME_REQUIRED:
             del self.fields["username"]
@@ -208,7 +208,7 @@ class BaseSignupForm(_base_signup_form_class()):
         if app_settings.UNIQUE_EMAIL:
             if value and email_address_exists(value):
                 raise forms.ValidationError \
-                    (_("A user is already registered with this e-mail address."))
+                    (_("A user is already registered with this email address."))
         return value
     
     def create_user(self, commit=True):
@@ -278,7 +278,7 @@ class SignupForm(BaseSignupForm):
     
     def save(self, request=None):
         # don't assume a username is available. it is a common removal if
-        # site developer wants to use e-mail authentication.
+        # site developer wants to use email authentication.
         email = self.cleaned_data["email"]
         
         if self.cleaned_data.get("confirmation_key"):
@@ -300,7 +300,7 @@ class SignupForm(BaseSignupForm):
                 join_invitation.accept(new_user) # should go before creation of EmailAddress below
                 if request:
                     messages.add_message(request, messages.INFO,
-                        ugettext(u"Your e-mail address has already been verified")
+                        ugettext(u"Your email address has already been verified")
                     )
                 # already verified so can just create
                 EmailAddress(user=new_user, email=email, verified=True, primary=True).save()
@@ -309,7 +309,7 @@ class SignupForm(BaseSignupForm):
                 if email:
                     if request:
                         messages.add_message(request, messages.INFO,
-                            ugettext(u"Confirmation e-mail sent to %(email)s") % {
+                            ugettext(u"Confirmation email sent to %(email)s") % {
                                 "email": email,
                             }
                         )
@@ -338,7 +338,7 @@ class UserForm(forms.Form):
 class AddEmailForm(UserForm):
     
     email = forms.EmailField(
-        label = _("E-mail"),
+        label = _("Email"),
         required = True,
         widget = forms.TextInput(attrs={"size": "30"})
     )
@@ -346,8 +346,8 @@ class AddEmailForm(UserForm):
     def clean_email(self):
         value = self.cleaned_data["email"]
         errors = {
-            "this_account": _("This e-mail address is already associated with this account."),
-            "different_account": _("This e-mail address is already associated with another account."),
+            "this_account": _("This email address is already associated with this account."),
+            "different_account": _("This email address is already associated with another account."),
         }
         emails = EmailAddress.objects.filter(email__iexact=value)
         if emails.filter(user=self.user).exists():
@@ -405,7 +405,7 @@ class SetPasswordForm(UserForm):
 class ResetPasswordForm(forms.Form):
     
     email = forms.EmailField(
-        label = _("E-mail"),
+        label = _("Email"),
         required = True,
         widget = forms.TextInput(attrs={"size":"30"})
     )
@@ -415,7 +415,7 @@ class ResetPasswordForm(forms.Form):
         self.users = User.objects.filter(Q(email__iexact=email)
                                          | Q(emailaddress__email__iexact=email)).distinct()
         if not self.users.exists():
-            raise forms.ValidationError(_("The e-mail address is not assigned to any user account"))
+            raise forms.ValidationError(_("The email address is not assigned to any user account"))
         return self.cleaned_data["email"]
     
     def save(self, **kwargs):
@@ -434,7 +434,7 @@ class ResetPasswordForm(forms.Form):
             current_site = Site.objects.get_current()
 
             # send the password reset email
-            subject = format_email_subject(_("Password Reset E-mail"))
+            subject = format_email_subject(_("Password Reset Email"))
             path = reverse("account_reset_password_from_key",
                            kwargs=dict(uidb36=int_to_base36(user.id),
                                        key=temp_key))
