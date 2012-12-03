@@ -1,5 +1,5 @@
 from django.utils.translation import ugettext_lazy as _
-from django import forms
+import floppyforms as forms
 
 from allauth.account.models import EmailAddress
 from allauth.account.forms import BaseSignupForm
